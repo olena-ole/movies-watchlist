@@ -5,6 +5,8 @@
 body {
     margin: 0;
     background-color: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
 }
 
 .container {
@@ -15,12 +17,64 @@ body {
 
 header {
     width: 100%;
-    height: 208px;                            /*!!!!!!!!!!!!FIX THIS LATER*/
-    background-image: url(images/ad.jpg);
+    height: 20vh;                            /*!!!!!!!!!!!!FIX THIS LATER*/
+    background: rgba(42, 34, 39, .5) url(images/ad.jpg);
     background-size: cover;
+    background-blend-mode: color-burn;
 }
 
 .inner-container {
     width: 84%;
+    height: 100%;
     margin: 0 auto;
 }
+
+.inner-container-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form {
+    position: absolute;
+    top: 100%;                         
+    transform: translate(0, -50%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    background: #121212;
+    height: 80vh;
+}
+
+.inner-container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2E2E2F;
+}
+
+.start-img {
+    width: 70px;
+}
+
+.start-img>img {
+    width: 100%;
+}
+
