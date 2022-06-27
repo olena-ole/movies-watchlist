@@ -72,6 +72,21 @@ main {
     width: 100%;
 }
 
+.add-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-link {
+    margin-right: 7px;
+}
+
+.add-link:hover + .add-p,
+.add-link:focus + .add-p {
+    color: plum;
+}
+
 /* ==========
 FORM
 ============*/
@@ -87,16 +102,51 @@ FORM
 
     background: #2E2E2F;
     border-radius: 6px;
-    padding: .6875em 0 .6875em .6875em;
     font-size: .875rem;
 }
 
 .form-img-wrapper {
     width: 1rem;
+    margin-left: 1em;
 }
 
 .form-img-wrapper > img {
     width: 100%;
+}
+
+.form-input,
+.submit-btn {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: inherit;
+}
+
+.form-input {
+    margin-left: .7em;
+
+    width: 75%;
+    background: inherit;
+    color: #A5A5A5;
+    border: none;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.submit-btn {
+    background: #4B4B4B;
+    border: none;
+    border-radius: 0px 6px 6px 0px;
+    cursor: pointer;
+    padding: .65em 2.43em;
+
+    color: #FFFFFF;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    color: plum;
 }
 
 
@@ -114,4 +164,28 @@ TYPOGRAPHY
     text-decoration: none;
     font-size: .875rem;
     font-weight: 700;
+}
+
+.top-link:hover,
+.top-link:focus {
+    color: plum;
+}
+
+.start-cta {
+    font-weight: 700;
+    font-size: 1.29rem;
+    margin-top: .4em;
+}
+
+.p-empty {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #787878;
+}
+
+.add-p {
+    margin: 0;
+    font-weight: 700;
+    font-size: .875rem;
+    color: #FFFFFF;
 }
