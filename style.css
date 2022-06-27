@@ -9,6 +9,10 @@ body {
     color: #fff;
 }
 
+/* ==========
+LAYOUT
+============*/
+
 .container {
     width: 100%;
     max-width: 550px;
@@ -42,16 +46,6 @@ header {
     align-items: center;
 }
 
-form {
-    position: absolute;
-    top: 100%;                         
-    transform: translate(0, -50%);
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
 main {
     background: #121212;
     height: 80vh;
@@ -74,7 +68,50 @@ main {
     width: 70px;
 }
 
-.start-img>img {
+.start-img > img {
     width: 100%;
 }
 
+/* ==========
+FORM
+============*/
+
+.search-form {
+    position: absolute;
+    top: 100%;                         
+    transform: translate(0, -50%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #2E2E2F;
+    border-radius: 6px;
+    padding: .6875em 0 .6875em .6875em;
+    font-size: .875rem;
+}
+
+.form-img-wrapper {
+    width: 1rem;
+}
+
+.form-img-wrapper > img {
+    width: 100%;
+}
+
+
+/* ==========
+TYPOGRAPHY
+============*/
+
+.top-title {
+    font-weight: 800;
+    font-size: 2.625rem;
+}
+
+.top-link {
+    color: inherit;
+    text-decoration: none;
+    font-size: .875rem;
+    font-weight: 700;
+}
