@@ -9,6 +9,10 @@ body {
     color: #fff;
 }
 
+h1, h4, p {
+    margin: 0;
+}
+
 /* ==========
 LAYOUT
 ============*/
@@ -48,7 +52,7 @@ header {
 
 main {
     background: #121212;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .inner-container-main {
@@ -130,7 +134,8 @@ FORM
     border: none;
 }
 
-.form-input:focus {
+.form-input:focus,
+.form-input:focus-visible {
     outline: none;
 }
 
@@ -181,6 +186,7 @@ TYPOGRAPHY
     font-weight: 700;
     font-size: 1.125rem;
     color: #787878;
+    text-align: center;
 }
 
 .add-p {
@@ -188,4 +194,84 @@ TYPOGRAPHY
     font-weight: 700;
     font-size: .875rem;
     color: #FFFFFF;
+}
+
+/* ==========
+FILM
+============*/
+
+.films {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 1.25em;
+}
+
+/* == FILM Layout ==*/
+
+.film {
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid #2C2C2C;
+}
+
+.film:last-of-type {
+    border-bottom: none;
+}
+
+.film-poster-wrapper {
+    width: 25%;
+    max-width: 99px;
+    margin: 1.25em;
+    margin-left: 0;
+}
+
+.film-descr {
+    width: 80%;
+}
+
+.film-poster-wrapper > img {
+    width: 100%;
+}
+
+.film-header,
+.film-details {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.film-details {
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.toggle-to-watchlist {
+    display: flex;
+    align-items: center;
+}
+
+/* == FILM Typography ==*/
+
+.film-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.rate,
+.film-details {
+    font-size: .75rem;
+}
+
+.toggle-to-watchlist > a {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+    margin-left: .5em;
+}
+
+.film-plot {
+    color: #A5A5A5;
+    font-size: .875rem;
 }
