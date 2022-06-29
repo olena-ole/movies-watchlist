@@ -58,6 +58,12 @@ main {
 .inner-container-main {
     display: flex;
     justify-content: center;
+}
+
+.start-container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
