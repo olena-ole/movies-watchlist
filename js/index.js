@@ -1,11 +1,12 @@
 import { formatSearchQuery, displayFilms, KEY, mainDiv } from './utils/utils.js';
 
 const form = document.querySelector('#search-form');
+const iconName = 'plus' 
 
 function displayResult(data) {
     if (data.Response === 'True') {
         const filmsIdArray = data.Search.map(film => film.imdbID);
-        displayFilms(filmsIdArray);
+        displayFilms(filmsIdArray, iconName);
     } else {
         mainDiv.innerHTML = `
             <div class="inner-container start-container">
@@ -33,9 +34,10 @@ mainDiv.addEventListener('click', e => {
         if (myWatchlist === null) {
             myWatchlist = [];
         };
-        myWatchlist.push(e.target.getAttribute('data-id'))
+        myWatchlist.push(e.target.getAttribute('data-id'));
+        myWatchlist = [...new Set(myWatchlist)];
         console.log(myWatchlist);
         localStorage.setItem('myWatchlistIds', JSON.stringify(myWatchlist));
-    }
-    
-})
+    };
+});
+localStorage.clear();

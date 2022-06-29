@@ -6,7 +6,7 @@ function formatSearchQuery(str) {
     return str.split(' ').join('+');
 }
 
-function displayFilms(arr) {
+function displayFilms(arr, icon) {
     let filmsHtml = '';
         arr.forEach(filmId => {
             fetch(`http://www.omdbapi.com/?apikey=${KEY}&i=${filmId}`)
@@ -27,7 +27,7 @@ function displayFilms(arr) {
                                 <p>${data.Runtime}</p>
                                 <p>Comedy</p>
                                 <div class="toggle-to-watchlist">
-                                    <img src="./icons/plus.png" alt="" class="toggle-btn" data-id="${data.imdbID}">
+                                    <img src="./icons/${icon}.png" alt="" class="toggle-btn" data-id="${data.imdbID}">
                                     <a href="./watchlist.html">Watchlist</a>
                                 </div>
                             </div>
@@ -42,6 +42,6 @@ function displayFilms(arr) {
                 `;
             });
         });
-}
+};
 
 export {formatSearchQuery, displayFilms, KEY, mainDiv};
