@@ -27,3 +27,15 @@ form.addEventListener('submit', (e) => {
         .then(data => displayResult(data));
 });
 
+mainDiv.addEventListener('click', e => {
+    if (e.target.classList.contains('toggle-btn')) {
+        let myWatchlist = JSON.parse(localStorage.getItem('myWatchlistIds'));
+        if (myWatchlist === null) {
+            myWatchlist = [];
+        };
+        myWatchlist.push(e.target.getAttribute('data-id'))
+        console.log(myWatchlist);
+        localStorage.setItem('myWatchlistIds', JSON.stringify(myWatchlist));
+    }
+    
+})

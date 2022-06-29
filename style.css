@@ -281,3 +281,7 @@ FILM
     color: #A5A5A5;
     font-size: .875rem;
 }
+
+.toggle-btn {
+    cursor: pointer;
+}
