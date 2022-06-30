@@ -269,11 +269,10 @@ FILM
     font-size: .75rem;
 }
 
-.toggle-to-watchlist > a {
-    font-size: inherit;
+.toggle-to-watchlist > p {
+    /* font-size: inherit;
     font-weight: inherit;
-    color: inherit;
-    text-decoration: none;
+    color: inherit; */
     margin-left: .5em;
 }
 

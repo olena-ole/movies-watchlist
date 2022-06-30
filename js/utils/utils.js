@@ -28,7 +28,7 @@ function displayFilms(arr, icon) {
                                 <p>Comedy</p>
                                 <div class="toggle-to-watchlist">
                                     <img src="./icons/${icon}.png" alt="" class="toggle-btn" data-id="${data.imdbID}">
-                                    <a href="./watchlist.html">Watchlist</a>
+                                    <p>Watchlist</p>
                                 </div>
                             </div>
                             <p class="film-plot">${data.Plot}</p>

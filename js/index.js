@@ -40,4 +40,3 @@ mainDiv.addEventListener('click', e => {
         localStorage.setItem('myWatchlistIds', JSON.stringify(myWatchlist));
     };
 });
-localStorage.clear();
