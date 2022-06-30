@@ -1,7 +1,7 @@
 import { formatSearchQuery, displayFilms, KEY, mainDiv } from './utils/utils.js';
 
 const form = document.querySelector('#search-form');
-const iconName = 'plus' 
+const iconName = 'plus';
 
 function displayResult(data) {
     if (data.Response === 'True') {
@@ -36,7 +36,6 @@ mainDiv.addEventListener('click', e => {
         };
         myWatchlist.push(e.target.getAttribute('data-id'));
         myWatchlist = [...new Set(myWatchlist)];
-        console.log(myWatchlist);
         localStorage.setItem('myWatchlistIds', JSON.stringify(myWatchlist));
     };
 });

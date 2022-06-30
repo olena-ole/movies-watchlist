@@ -1,9 +1,8 @@
 
 import { mainDiv, displayFilms } from './utils/utils.js'
-const iconName = 'minus'
+const iconName = 'minus';
 
 let myWatchlist = JSON.parse(localStorage.getItem('myWatchlistIds'));
-console.log(myWatchlist);
 
 if (myWatchlist === null) {
     myWatchlist = [];
